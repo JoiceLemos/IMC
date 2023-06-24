@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+    font-family:'Inter', sans-serif;
+}
+
+h1{
+    font-size: 32px;
+    color: #333333;
+}
+
+p{
+    font-size: 16px;/*Valor inicial de qualquer parágrafo. Tanto faz se escrever ou não 16px*/
+    color: #666666;
+}
+
+table{
+    width: 550px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr{
+    background-color: #DDDDDD;
+    height: 30px;
+    color: #333333;
+}
+
+tr:hover{
+    background-color: #DFF5FF;
+}
+
+th{
+    background-color: #0A5FAE;
+    color: #FFFFFF;
+}
+
+
+#header{
+    width: 100%;
+    height: 260px;
+    /*background-color: black;*/
+    background-image: url(../img/background.jpg);
+    background-size: cover; /*tamanho da imagem de fundo. Se não colocar, a imagem vai se repetir em alguma tela*/
+    background-position: right top;
+
+    display: flex; /*iniciando o flexbox*/
+    align-items: center; /*alinhamento vertical*/
+    justify-content: center; /*alinhamento horizontal*/
+
+}
+
+#container{
+    width: 95%;
+    max-width: 1100px;
+    margin: 50px auto;
+    /*width 100% - TELA RESPONSIVA. 100% DA TELA MENOR QUE TIVER .EX: TELEFONE
+        width 1100px = MÁXIMO DA TELA - EX: PC/NOTBOOK . */
+
+}
+
+#content{
+    display: flex;
+    justify-content: space-between;
+}
+
+#result{
+    width: 500px;
+    
+}
+
+#result form{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    column-gap: 20px;  /*Memsa coisa que justify-content: space-between. A única diferença é que vc dá o valor 
+    entre o espaço.  */
+}
+
+#result button{
+    width: 100%;
+    height: 30px;
+    background-color: #0A5FAE;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/*Altera a cor de fundo do botão quando o mouse passa*/
+#result button:hover{
+    background-color: #084a88;
+}
+
+#result input{
+    width: 240px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: solid 1px #cccccc;
+    box-sizing: border-box; /*Faz com que border e padding não interfira nas dimensões*/
+
+}
+
+#result-imc{
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    display: none; /*O elemento não estará visível  (o campo verde que após escrever altura e peso, vai mostrar o calculo embaixo.*/  
+}
+
+/*Para ver a diferença entre padding e margem neste exemplo, colocar uma cor na tag result-imc*/
+
+#result h2{
+    margin: 0;
+}
+
+#rodape{
+    width: 100%;
+    background-color: #D2E9FF;
+    text-align: center;
+    color: #0A5FAE;
+    font-size: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+
+@media (max-width: 1120px){
+
+    #content{
+        flex-direction: column-reverse;
+    }
+
+    #result{
+        width: 100%;
+    }
+
+    #result input{
+        width: 100%;
+    }
+
+    form div{
+        width: 49%;
+    }
+
+    table{
+       width: 100%;
+       margin-top: 10px;
+    }
+
+}
+
+
+
+
+
+
